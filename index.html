@@ -1,83 +1,543 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tobi's Personal Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="God Made Mum Ondo – A nonprofit providing shelter, food, and education for vulnerable children and families in Ondo City, Nigeria." />
+  <title>God Made Mum Ondo | Help the Helpless &amp; Vulnerable</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" href="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/cropped-godmademum-logo.png" type="image/png" />
 </head>
-
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img align src="images/toby.jpg" alt="Oluwatobi Agboola Pic"></td>
-      <td>
-        <h1>Oluwatobi Agboola</h1>
-        <p><em>co-Founder and CTO of</em> <strong><a href="http://regalosgifts.com.ng">Regalos Gifts</strong></a></p>
-        <p>I am an iOS and Web Developer. I ❤️ runnning and cooking.</p>
-      </td>
 
-    </tr>
-  </table>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/godmademum-logo.png" alt="God Made Mum Ondo" />
+      </a>
 
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="news.html">News &amp; Stories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
 
-  <br>
+      <div class="navbar-cta">
+        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+      </div>
 
-  <hr>
-  <h3>Books and Teaching</h3>
-  <ul>
-    <li>The complete iOS App Development Bootcamp</li>
-    <li>The Complete Web Development Bootcamp</li>
-  </ul>
-  <hr>
-  <h3>Work Experience</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Job Title</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2010 -2013</td>
-        <td>Lead Developer</td>
-      </tr>
-      <tr>
-        <td>2010</td>
-        <td>Web Developer</td>
-      </tr>
-    </tbody>
-    <tfoot>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    </tfoot>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-modal="true">
+    <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="news.html">News &amp; Stories</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="btn btn-primary">Donate Now</a>
+  </div>
 
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-heart"></i>
+          <span>Nonprofit</span> &mdash; Ondo City, Nigeria
+        </div>
 
-  </table>
-  <hr>
-  <h3>Skills</h3>
-  <table cellspacing="10">
-    <tr>
-      <td>Web Development</td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>iOS Development</td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>Photography</td>
-      <td>⭐⭐</td>
-    </tr>
-  </table>
-  <hr>
-  <a href="hobbies.html">My Hobbies</a>
-  <br>
-  <a href="contact.html">Contact Me</a>
-  <br>
-  <a href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf" download>Download Cheetsheet</a>
+        <h1>Every Child Deserves a<br /><em>Dignified Life</em></h1>
 
+        <p>
+          God Made Mum Ondo provides shelter, food security, and quality education
+          for underprivileged children and their families, starting from Ondo City.
+        </p>
 
+        <div class="hero-actions">
+          <a href="donate.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-heart"></i> Donate Today
+          </a>
+          <a href="our-work.html" class="btn btn-outline btn-lg">
+            See Our Work <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- ===================== STATS BAR ===================== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-count="500" data-suffix="+">0</div>
+          <div class="stat-label">Children Helped</div>
+        </div>
+        <div class="stat-item fade-up fade-up-delay-1">
+          <div class="stat-number" data-count="2000" data-suffix="+">0</div>
+          <div class="stat-label">Meals Served</div>
+        </div>
+        <div class="stat-item fade-up fade-up-delay-2">
+          <div class="stat-number" data-count="30" data-suffix="+">0</div>
+          <div class="stat-label">Volunteers</div>
+        </div>
+        <div class="stat-item fade-up fade-up-delay-3">
+          <div class="stat-number" data-count="100" data-suffix="+">0</div>
+          <div class="stat-label">Donations Received</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-images fade-up">
+          <img
+            class="about-img-main"
+            src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/cveoh_jjmee-1024x813.jpg"
+            alt="Children supported by God Made Mum Ondo"
+          />
+          <div class="about-badge">
+            <div class="about-badge-number">5+</div>
+            <div class="about-badge-text">Years of<br>Impact</div>
+          </div>
+          <img
+            class="about-img-accent"
+            src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/ym4my-xj8ey-683x1024.jpg"
+            alt="Community outreach"
+          />
+        </div>
+
+        <div class="about-content fade-up fade-up-delay-2">
+          <span class="section-label">About Us</span>
+          <h2>A Mission Born from<br />a Mother's Heart</h2>
+          <p>
+            After witnessing children scavenging for food near a dumpsite during
+            a family visit, Mrs. Praise Akinrinmade — an Early Years Practitioner
+            and counsellor based in the UK — felt called to act. God Made Mum Ondo
+            was born.
+          </p>
+          <p>
+            We believe every child deserves the essentials of a dignified life:
+            shelter, nourishment, and education. Today, we serve the most vulnerable
+            children and families in Ondo City, with plans to grow across Nigeria.
+          </p>
+
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon">&#127968;</div>
+              <div class="about-value-text">
+                <h4>Safe Shelter</h4>
+                <p>Ensuring no child is without a safe place to call home.</p>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">&#127869;&#65039;</div>
+              <div class="about-value-text">
+                <h4>Food Security</h4>
+                <p>Providing nutritious meals so children can grow and thrive.</p>
+              </div>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">&#128218;</div>
+              <div class="about-value-text">
+                <h4>Quality Education</h4>
+                <p>Supplying school essentials so every child can learn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRAMS ===================== -->
+  <section class="section programs">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">What We Do</span>
+        <h2>Our Core Programmes</h2>
+        <p>From holiday outreach to new-mother support, every programme is designed to restore dignity and hope.</p>
+      </div>
+
+      <div class="programs-grid">
+
+        <div class="program-card fade-up">
+          <div class="program-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-9SMK7PU.jpg" alt="Holiday outreach programme" />
+          </div>
+          <div class="program-card-body">
+            <div class="program-card-icon">&#127873;</div>
+            <h3>Holiday Outreach</h3>
+            <p>Distribution of food parcels, gifts, and essential items during Christmas and other holiday seasons so no child is left out of the celebration.</p>
+            <a href="our-work.html" class="program-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="program-card fade-up fade-up-delay-1">
+          <div class="program-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-6XDVXLQ.jpg" alt="Support for new mothers" />
+          </div>
+          <div class="program-card-body">
+            <div class="program-card-icon">&#128116;</div>
+            <h3>New Mother Support</h3>
+            <p>Cash assistance, clothing, and baby items for vulnerable new mothers, giving every newborn the best possible start in life.</p>
+            <a href="our-work.html" class="program-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="program-card fade-up fade-up-delay-2">
+          <div class="program-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-H92P9TT.jpg" alt="Food and education programme" />
+          </div>
+          <div class="program-card-body">
+            <div class="program-card-icon">&#128218;</div>
+            <h3>Food &amp; Education</h3>
+            <p>Delivering nutritious meals and school supplies to children in Ondo City, removing barriers so they can attend and succeed in school.</p>
+            <a href="our-work.html" class="program-card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MISSION BANNER ===================== -->
+  <section class="mission-banner">
+    <div class="container">
+      <div class="mission-banner-inner">
+        <div class="fade-up">
+          <h2>Help the Helpless &amp; Vulnerable</h2>
+          <p>
+            Your support directly funds meals, school books, and hope for the children
+            of Ondo City. Every contribution — no matter the size — changes a life.
+          </p>
+        </div>
+        <div class="fade-up fade-up-delay-2">
+          <a href="donate.html" class="btn btn-secondary btn-lg">
+            <i class="fa-solid fa-heart"></i> Make a Donation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="section gallery">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Our Impact</span>
+        <h2>Moments of Joy &amp; Change</h2>
+        <p>A glimpse into the lives we touch and the communities we serve across Ondo City.</p>
+      </div>
+
+      <div class="gallery-grid fade-up">
+        <div class="gallery-item">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-U8SCECN.jpg" alt="Community outreach" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-UKNM2Q8.jpg" alt="Children receiving help" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-5K6CPQD.jpg" alt="Food distribution" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/2024-12-16-06_09_22-Instagram-—-Mozilla-Firefox.png" alt="Holiday event" />
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/box.jpg" alt="Donated supplies" />
+          <div class="gallery-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOUNDER ===================== -->
+  <section class="founder">
+    <div class="container">
+      <div class="founder-inner">
+
+        <div class="founder-img fade-up">
+          <img
+            src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/Praise-Akinrinmade-225x300.jpeg"
+            alt="Mrs. Praise Akinrinmade, Founder"
+          />
+        </div>
+
+        <div class="founder-content fade-up fade-up-delay-2">
+          <span class="section-label">Our Founder</span>
+          <h2>Mrs. Praise Akinrinmade</h2>
+          <p>
+            An Early Years Practitioner and counsellor based in the UK, Praise
+            returned to her roots in Ondo during a family visit and witnessed
+            something that changed her life forever — children scavenging for
+            food near a dumpsite.
+          </p>
+
+          <div class="founder-quote">
+            <p>
+              "I couldn't look away. Those children deserved more — they deserved
+              what every child deserves: a full belly, a safe home, and the chance
+              to dream."
+            </p>
+          </div>
+
+          <p>
+            That moment became the foundation of God Made Mum Ondo. Today, Praise
+            leads a dedicated team of volunteers and supporters on both sides of the
+            Atlantic, united by one shared belief: every child is made for more.
+          </p>
+
+          <a href="our-work.html" class="btn btn-secondary" style="margin-top:12px;">
+            Discover Our Story <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEAM ===================== -->
+  <section class="section team">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-label">Our Team</span>
+        <h2>The Dedicated Volunteers</h2>
+        <p>Passionate people on the ground, making change happen every single day.</p>
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card fade-up">
+          <div class="team-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/Praise-Akinrinmade-225x300.jpeg" alt="Praise Akinrinmade" />
+          </div>
+          <div class="team-card-body">
+            <h4>Praise Akinrinmade</h4>
+            <p>Founder &amp; Director</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-up fade-up-delay-1">
+          <div class="team-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_Team-TPYW66E.jpg" alt="Olabisi Oyeneyin" />
+          </div>
+          <div class="team-card-body">
+            <h4>Olabisi Oyeneyin</h4>
+            <p>Volunteer Coordinator</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-up fade-up-delay-2">
+          <div class="team-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_Team-UQAW7C5.jpg" alt="Irantiola Adeosun" />
+          </div>
+          <div class="team-card-body">
+            <h4>Irantiola Adeosun</h4>
+            <p>Outreach Lead</p>
+          </div>
+        </div>
+
+        <div class="team-card fade-up fade-up-delay-3">
+          <div class="team-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_team_Home02-ETLLW9Z.jpg" alt="Fasoranti Sadiat Bukola" />
+          </div>
+          <div class="team-card-body">
+            <h4>Fasoranti Sadiat Bukola</h4>
+            <p>Community Liaison</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS SECTION ===================== -->
+  <section class="section news">
+    <div class="container">
+      <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+        <div>
+          <span class="section-label">Latest Updates</span>
+          <h2>News &amp; Stories</h2>
+        </div>
+        <a href="news.html" class="btn btn-outline-dark">View All Stories <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="news-grid">
+
+        <div class="news-card fade-up">
+          <div class="news-card-img">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/2024-12-16-06_09_22-Instagram-—-Mozilla-Firefox.png" alt="Christmas food drive" />
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">Outreach</span>
+              <span class="news-date">January 9, 2024</span>
+            </div>
+            <h3>Spreading Christmas Cheer: Successful Food Drive in Ondo City</h3>
+            <p>
+              Our "Feed the Future" Christmas campaign ensured no child in Ondo City
+              went hungry over the festive season. The community response was
+              overwhelming — hundreds of families came together to celebrate and share.
+            </p>
+            <a href="news.html" class="news-card-link">Read the full story <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="news-sidebar">
+          <div class="news-mini fade-up fade-up-delay-1">
+            <div class="news-mini-img">
+              <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-9SMK7PU.jpg" alt="Story of hope" />
+            </div>
+            <div class="news-mini-body">
+              <div class="news-date">December 1, 2023</div>
+              <h4>Transforming Lives: A Story of Hope from Ondo City</h4>
+              <a href="news.html">Read story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="news-mini fade-up fade-up-delay-2">
+            <div class="news-mini-img">
+              <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/box.jpg" alt="Donation drive" />
+            </div>
+            <div class="news-mini-body">
+              <div class="news-date">November 2023</div>
+              <h4>Your Donations in Action: What Your Generosity Provides</h4>
+              <a href="news.html">Read story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="news-mini fade-up fade-up-delay-3">
+            <div class="news-mini-img">
+              <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/img_feedback_Home01-H92P9TT.jpg" alt="Back to school" />
+            </div>
+            <div class="news-mini-body">
+              <div class="news-date">September 2023</div>
+              <h4>Back to School: Supplies for 80 Children in Ondo City</h4>
+              <a href="news.html">Read story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DONATE CTA ===================== -->
+  <section class="donate-cta">
+    <div class="container">
+      <h2>Ready to Make a Difference?</h2>
+      <p>Every pound and naira you give goes directly to feeding, sheltering, and educating the children of Ondo City.</p>
+
+      <div class="donate-options" style="margin-bottom:40px;">
+        <span class="donate-amount-btn">&#163;5</span>
+        <span class="donate-amount-btn active">&#163;10</span>
+        <span class="donate-amount-btn">&#163;25</span>
+        <span class="donate-amount-btn">&#163;50</span>
+      </div>
+
+      <a href="donate.html" class="btn btn-outline btn-lg">
+        <i class="fa-solid fa-heart"></i> Donate Now
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/godmademum-logo.png" alt="God Made Mum Ondo" />
+          <p>
+            A nonprofit organisation dedicated to providing shelter, food security,
+            and quality education for underprivileged children and their families
+            in Ondo City, Nigeria.
+          </p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Programmes</h5>
+          <ul>
+            <li><a href="our-work.html">Holiday Outreach</a></li>
+            <li><a href="our-work.html">New Mother Support</a></li>
+            <li><a href="our-work.html">Food Security</a></li>
+            <li><a href="our-work.html">Education Support</a></li>
+            <li><a href="our-work.html">Street Children</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+            <span>20 Oreretu Street, 2nd Floor,<br />Miller House, Ondo City, Nigeria</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope footer-contact-icon"></i>
+            <a href="mailto:heart@godmademumondo.org.uk">heart@godmademumondo.org.uk</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone footer-contact-icon"></i>
+            <a href="tel:+2348033620260">+234 803 362 0260</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 God Made Mum Ondo. All rights reserved. Registered Nonprofit.</p>
+        <a href="https://god-made-mum-ondo.co.uk" target="_blank" rel="noopener">god-made-mum-ondo.co.uk</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
-
 </html>

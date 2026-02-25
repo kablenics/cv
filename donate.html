@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Donate to God Made Mum Ondo – Your gift provides meals, shelter, and education for vulnerable children in Ondo City, Nigeria." />
+  <title>Donate | God Made Mum Ondo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/cropped-godmademum-logo.png" type="image/png" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/godmademum-logo.png" alt="God Made Mum Ondo" />
+      </a>
+      <ul class="navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="news.html">News &amp; Stories</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar-cta">
+        <a href="donate.html" class="btn btn-primary active">Donate Now</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true">
+    <button class="mobile-menu-close">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="news.html">News &amp; Stories</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="btn btn-primary">Donate Now</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="section-label">Give Today</span>
+      <h1>Make a Donation</h1>
+      <p>Your generosity directly funds shelter, meals, and education for vulnerable children and families in Ondo City, Nigeria.</p>
+    </div>
+  </div>
+
+  <!-- DONATE SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="donate-grid">
+
+        <!-- Donation Form -->
+        <div class="fade-up">
+          <div class="donate-form-card">
+            <h3 style="margin-bottom:8px;">Choose Your Gift</h3>
+            <p style="margin-bottom:32px;font-size:0.95rem;">Every donation goes directly to our programmes in Ondo City. 100% of your gift reaches the children we serve.</p>
+
+            <div class="amount-grid" id="amount-grid">
+              <div class="amount-option" data-value="5" onclick="selectAmount(this)">&#163;5</div>
+              <div class="amount-option" data-value="10" onclick="selectAmount(this)">&#163;10</div>
+              <div class="amount-option selected" data-value="25" onclick="selectAmount(this)">&#163;25</div>
+              <div class="amount-option" data-value="50" onclick="selectAmount(this)">&#163;50</div>
+              <div class="amount-option" data-value="100" onclick="selectAmount(this)">&#163;100</div>
+              <div class="amount-option" data-value="custom" onclick="selectAmount(this)">Other</div>
+            </div>
+
+            <form data-form="donate" onsubmit="handleDonate(event)" style="margin-top:8px;">
+              <div class="form-group">
+                <label class="form-label" for="donate-amount">Amount (&#163;)</label>
+                <input class="form-input" type="number" id="donate-amount" name="amount" value="25" min="1" placeholder="Enter amount" />
+              </div>
+
+              <div style="display:flex;gap:16px;margin-bottom:24px;">
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-weight:600;font-size:0.9rem;">
+                  <input type="radio" name="frequency" value="once" checked style="accent-color:var(--primary);width:18px;height:18px;" />
+                  Give Once
+                </label>
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-weight:600;font-size:0.9rem;">
+                  <input type="radio" name="frequency" value="monthly" style="accent-color:var(--primary);width:18px;height:18px;" />
+                  Give Monthly
+                </label>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="first-name">First Name</label>
+                  <input class="form-input" type="text" id="first-name" name="firstName" placeholder="Your first name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="last-name">Last Name</label>
+                  <input class="form-input" type="text" id="last-name" name="lastName" placeholder="Your last name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Leave a message (optional)</label>
+                <textarea class="form-input" id="message" name="message" placeholder="A note for the team…" rows="3"></textarea>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px;">
+                <input type="checkbox" id="gift-aid" name="giftAid" style="accent-color:var(--primary);width:18px;height:18px;" />
+                <label for="gift-aid" style="font-size:0.88rem;color:var(--mid);cursor:pointer;">
+                  I am a UK taxpayer and want to claim Gift Aid on this donation. (Boosts your donation by 25% at no extra cost.)
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                <i class="fa-solid fa-heart"></i> Donate Now
+              </button>
+
+              <p style="font-size:0.78rem;color:var(--muted);text-align:center;margin-top:16px;">
+                <i class="fa-solid fa-lock" style="color:var(--green);"></i>
+                Secure, encrypted donation. Your details are never shared.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="fade-up fade-up-delay-2">
+          <h3 style="margin-bottom:24px;">Your Impact</h3>
+          <div class="impact-list">
+            <div class="impact-item">
+              <div class="impact-icon">&#127869;&#65039;</div>
+              <div class="impact-text">
+                <strong>&#163;5 — Feeds a Child for a Week</strong>
+                <span>Provides 7 days of nutritious meals for one vulnerable child in Ondo City.</span>
+              </div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon">&#128218;</div>
+              <div class="impact-text">
+                <strong>&#163;10 — School Supplies for One Child</strong>
+                <span>A full back-to-school pack: bag, notebooks, pens, and a ruler.</span>
+              </div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon">&#128116;</div>
+              <div class="impact-text">
+                <strong>&#163;25 — New Mother Welcome Pack</strong>
+                <span>Baby essentials, clothing, and cash support for a vulnerable new mum.</span>
+              </div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon">&#127873;</div>
+              <div class="impact-text">
+                <strong>&#163;50 — Christmas Outreach for a Family</strong>
+                <span>A food parcel, gifts, and essentials to celebrate Christmas with dignity.</span>
+              </div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon">&#127968;</div>
+              <div class="impact-text">
+                <strong>&#163;100 — A Month of Support</strong>
+                <span>Feeds, educates, and supports a vulnerable child for an entire month.</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--white);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm);text-align:center;">
+            <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/badge.png" alt="Registered Nonprofit Badge" style="height:80px;margin:0 auto 16px;" />
+            <p style="font-size:0.85rem;margin:0;">God Made Mum Ondo is a registered nonprofit organisation. All donations are used directly in our programmes.</p>
+          </div>
+
+          <div style="margin-top:24px;padding:24px;border:2px solid var(--border);border-radius:var(--radius);">
+            <h4 style="margin-bottom:12px;"><i class="fa-solid fa-envelope" style="color:var(--primary);margin-right:8px;"></i> Other Ways to Give</h4>
+            <p style="font-size:0.9rem;margin-bottom:12px;">Prefer to donate by bank transfer or cheque? Contact us directly and we'll arrange it.</p>
+            <a href="contact.html" class="btn btn-outline-dark" style="width:100%;justify-content:center;">Get in Touch</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL / PROMISE -->
+  <section class="founder">
+    <div class="container">
+      <div class="founder-inner">
+        <div class="founder-img fade-up">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/Praise-Akinrinmade-225x300.jpeg" alt="Praise Akinrinmade, Founder" />
+        </div>
+        <div class="founder-content fade-up fade-up-delay-2">
+          <span class="section-label">A Promise to You</span>
+          <h2>Your Donation Makes a Real Difference</h2>
+          <p>We are committed to full transparency. Every pound donated goes directly to the programmes serving children and families in Ondo City — no bureaucracy, no waste.</p>
+          <div class="founder-quote">
+            <p>"When you give to God Made Mum Ondo, you're not just writing a cheque — you're feeding a child, keeping a family together, and giving a young person a future they can believe in."</p>
+          </div>
+          <p style="margin-top:8px;color:rgba(255,255,255,0.6);font-size:0.9rem;">— Mrs. Praise Akinrinmade, Founder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/godmademum-logo.png" alt="God Made Mum Ondo" />
+          <p>A nonprofit organisation dedicated to providing shelter, food security, and quality education for underprivileged children and their families in Ondo City, Nigeria.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="news.html">News &amp; Stories</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programmes</h5>
+          <ul>
+            <li><a href="our-work.html">Holiday Outreach</a></li>
+            <li><a href="our-work.html">New Mother Support</a></li>
+            <li><a href="our-work.html">Food Security</a></li>
+            <li><a href="our-work.html">Education Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+            <span>20 Oreretu Street, 2nd Floor,<br />Miller House, Ondo City, Nigeria</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope footer-contact-icon"></i>
+            <a href="mailto:heart@godmademumondo.org.uk">heart@godmademumondo.org.uk</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone footer-contact-icon"></i>
+            <a href="tel:+2348033620260">+234 803 362 0260</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 God Made Mum Ondo. All rights reserved. Registered Nonprofit.</p>
+        <a href="https://god-made-mum-ondo.co.uk" target="_blank" rel="noopener">god-made-mum-ondo.co.uk</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function selectAmount(el) {
+      document.querySelectorAll('.amount-option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      const val = el.dataset.value;
+      const input = document.getElementById('donate-amount');
+      if (val !== 'custom') {
+        input.value = val;
+      } else {
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    function handleDonate(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('[type="submit"]');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing…';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Thank You!';
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fa-solid fa-heart"></i> Donate Now';
+          btn.disabled = false;
+        }, 3000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
