@@ -117,7 +117,10 @@
             <h3 style="margin-bottom:8px;">Send Us a Message</h3>
             <p style="margin-bottom:32px;font-size:0.95rem;">Fill in the form below and we'll get back to you as soon as possible.</p>
 
-            <form data-form="contact" action="mailto:heart@godmademumondo.org.uk" method="post" enctype="text/plain">
+            <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+              <!-- ✏️  Replace REPLACE_WITH_YOUR_FORM_ID with your Formspree form ID -->
+              <input type="hidden" name="_subject" value="New message from God Made Mum Ondo website" />
+              <input type="hidden" name="_next" value="contact.html?sent=true" />
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="contact-first">First Name</label>
@@ -160,6 +163,13 @@
                 Send Message <i class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
+
+            <!-- Success message (shown after redirect back) -->
+            <div id="form-success" style="display:none;margin-top:24px;padding:20px 24px;background:#EDFAF2;border:2px solid #2E9F57;border-radius:12px;text-align:center;">
+              <i class="fa-solid fa-circle-check" style="color:#2E9F57;font-size:1.5rem;margin-bottom:8px;display:block;"></i>
+              <strong style="color:#134D2A;">Message sent — thank you!</strong>
+              <p style="font-size:0.88rem;color:#1B6B3A;margin-top:4px;">We'll get back to you within 48 hours.</p>
+            </div>
           </div>
         </div>
 
@@ -257,5 +267,14 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // Show success banner if Formspree redirected back with ?sent=true
+    if (new URLSearchParams(window.location.search).get('sent') === 'true') {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      if (form) form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  </script>
 </body>
 </html>
