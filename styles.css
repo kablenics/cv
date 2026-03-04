@@ -359,7 +359,7 @@ p:last-child { margin-bottom: 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/2024-12-16-06_09_22-Instagram-—-Mozilla-Firefox.png');
+  background-image: url('https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/school-children-100.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -1331,8 +1331,24 @@ p:last-child { margin-bottom: 0; }
   position: absolute;
   inset: 0;
   opacity: 0.15;
+  background-image: var(--hero-bg);
   background-size: cover;
   background-position: center;
+}
+
+/* Team avatar for members without real photos */
+.team-card-avatar {
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
 }
 
 .page-hero-inner { position: relative; z-index: 1; }
