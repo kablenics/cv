@@ -359,7 +359,7 @@ p:last-child { margin-bottom: 0; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/12/school-children-100.jpg');
+  background-image: url('images/school-children-100.jpg');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -1078,7 +1078,7 @@ p:last-child { margin-bottom: 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://god-made-mum-ondo.co.uk/wp-content/uploads/2024/01/cveoh_jjmee-1024x813.jpg') center/cover;
+  background: url('images/cveoh_jjmee.jpg') center/cover;
   opacity: 0.15;
 }
 
