@@ -224,7 +224,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .navbar:not(.scrolled) .navbar-logo img {
-  filter: brightness(0) invert(1);
+  /* logo stays as-is — orange circle is self-visible */
 }
 
 .navbar-nav {
@@ -371,10 +371,10 @@ p:last-child { margin-bottom: 0; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    135deg,
-    rgba(26, 26, 26, 0.75) 0%,
-    rgba(212, 80, 26, 0.45) 60%,
-    rgba(26, 26, 26, 0.2) 100%
+    to right,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.35) 100%
   );
 }
 
@@ -1203,7 +1203,7 @@ p:last-child { margin-bottom: 0; }
   height: 52px;
   width: auto;
   margin-bottom: 20px;
-  filter: brightness(0) invert(1);
+  /* logo stays as-is — orange circle is self-visible */
   opacity: 0.9;
 }
 
